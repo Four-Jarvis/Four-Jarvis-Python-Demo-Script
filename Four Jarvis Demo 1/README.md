@@ -61,26 +61,26 @@ Jupyter Notebook/ Visual Studio Code
 
 
 
-![image-20200423000745075](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000745075.png)
+![image-1](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000745075.png)
 
-![image-20200423000620695](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000620695.png)
+![image-2](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000620695.png)
 
-![image-20200423000816556](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000816556.png)
+![image-3](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000816556.png)
 
-![image-20200423000842771](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000842771.png)
+![image-4](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000842771.png)
 
-![image-20200423000921325](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000921325.png)
+![image-5](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000921325.png)
 
-![image-20200423000936807](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000936807.png)
+![image-6](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000936807.png)
 
-![image-20200423000951586](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000951586.png)
+![image-7](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000951586.png)
 
-![image-20200423001007731](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001007731.png)
+![image-8](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001007731.png)
 
-![image-20200423001111039](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001111039.png)
+![image-9](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001111039.png)
 
-![image-20200423001159681](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001159681.png)
+![image-10](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001159681.png)
 
-![image-20200423001323079](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001323079.png)
+![image-11](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001323079.png)
 
-![image-20200423015125201](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423015125201.png)
+![image-12](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423015125201.png)
