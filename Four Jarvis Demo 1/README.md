@@ -49,11 +49,11 @@ def main():  实现以上函数，通过multiprocessing开启多进程实现数�
 
 ### 本DEMO环境配置
 
-Python：3.6
-Mysql：8.0
-Google Chrome版本：81.0.4044.113
-ChromeDriver：81.0.4044.69
-Jupyter Notebook/ Visual Studio Code 
+Python：3.6  
+Mysql：8.0  
+Google Chrome版本：81.0.4044.113  
+ChromeDriver：81.0.4044.69  
+Jupyter Notebook/ Visual Studio Code   
 
 ## 微信公众号：Four Jarvis
 
@@ -81,6 +81,6 @@ Jupyter Notebook/ Visual Studio Code
 
 ![image-20200423001159681](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001159681.png)
 
-![Four Jarvis Auto Demo1 2020-04-22](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001323079.png)
+![image-20200423001323079](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001323079.png)
 
 ![image-20200423015125201](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423015125201.png)
