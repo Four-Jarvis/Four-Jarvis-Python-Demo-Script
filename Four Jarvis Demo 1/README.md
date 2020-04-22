@@ -55,36 +55,32 @@ Google Chrome版本：81.0.4044.113
 ChromeDriver：81.0.4044.69
 Jupyter Notebook/ Visual Studio Code 
 
-
+#### 微信公众号：Four Jarvis
 
 ##### DEMO图片
 
 
 
-![image-20200423000745075](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423000745075.png)
+![image-20200423000745075](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000745075.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000745075.png)
 
-![image-20200423000620695](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423000620695.png)
+![image-20200423000620695](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000620695.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000620695.png)
 
-![image-20200423000816556](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423000816556.png)
+![image-20200423000816556](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000816556.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000816556.png)
 
-![image-20200423000842771](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423000842771.png)
+![image-20200423000842771](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000842771.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000842771.png)
 
-![image-20200423000921325](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423000921325.png)
+![image-20200423000921325](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000921325.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000921325.png)
 
-![image-20200423000936807](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423000936807.png)
+![image-20200423000936807](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000936807.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000936807.png)
 
-![image-20200423000951586](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423000951586.png)
+![image-20200423000951586](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000951586.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000951586.png)
 
-![image-20200423001007731](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423001007731.png)
+![image-20200423001007731](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001007731.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423001007731.png)
 
-![image-20200423001111039](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423001111039.png)
+![image-20200423001111039](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001111039.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423001111039.png)
 
-![image-20200423001159681](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423001159681.png)
+![image-20200423001159681](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001159681.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423001159681.png)
 
-![Four Jarvis Auto Demo1 2020-04-22](D:\python-bit\Four Jarvis\Demo1\Four Jarvis Auto Demo1 2020-04-22.jpg)![image-20200423001323079](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423001323079.png)
+![Four Jarvis Auto Demo1 2020-04-22](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423001323079.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423001323079.png)
 
-![image-20200423015125201](C:\Users\yjw94\AppData\Roaming\Typora\typora-user-images\image-20200423015125201.png)
-
-
-
-# 微信公众号：Four Jarvis
+![image-20200423015125201](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423015125201.png](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423015125201.png)
