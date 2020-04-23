@@ -61,7 +61,7 @@ Jupyter Notebook/ Visual Studio Code
 
 
 
-![image-1](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four%20Jarvis%20Demo%201/demo_report_img/image-20200423000745075.png)
+![image-1](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/blob/master/Four Jarvis Demo 1/demo_report_img/image-20200423000745075.png)
 
 ![image-2](https://github.com/Four-Jarvis/Four-Jarvis-Python-Demo-Script/raw/demo_report_img/image-20200423000620695.png)
 
