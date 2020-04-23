@@ -1,5 +1,4 @@
 #coding=utf-8
-
 import re
 import sys
 import os
@@ -312,164 +311,74 @@ def save2docx(date, company, path):
     return auto_docx
 
 
-def save2docx(date, company, path):
-    # 创建一个空白Word对象，并设置好字体
-    word = docx.Document()
-    word.styles['Normal'].font.name = u'微软雅黑'  # 可换成word里面任意字体
-    word.styles['Normal']._element.rPr.rFonts.set(qn('w:eastAsia'), u'微软雅黑')  # 这里也需要同时修改
+def save2pptx(date, company, path):
 
-    # 创建封面    
-    p = word.add_picture('E:/Four Jarvis LOGO.png', width=Inches(1.25)) # 创建一个图片
-    p = word.add_paragraph()  # 创建一个段落
-    p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER  # 居中设置
-    p.paragraph_format.space_before = Pt(150)  # 段前距为200，这个是测试出来的
-    p.paragraph_format.space_after = Pt(30)  # 段后距为40，这个也是测试出来的
-    run = p.add_run('Four Jarvis数据分析报告')  # 在段落里添加内容
-    font = run.font  # 设置字体
-    font.color.rgb = RGBColor(17, 17, 17)  # 颜色设置，这里是用RGB颜色
-    font.size = Pt(36)  # 字体大小设置，和word里面的字号相对应
-
-    p = word.add_paragraph()  # 新建一个段落
-    p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run(date)  # 在段落中输入当天日期
-    font = run.font
-    font.color.rgb = RGBColor(17, 17, 17)
-    font.size = Pt(26)
+    prs = Presentation('D:/python-bit/Four Jarvis/Demo1/model.pptx') # 使用预先创建好的PPT模板,也可以直接生成
+    slide_1 = prs.slides[0] # 创建ppt封面 第一页
+    title = slide_1.shapes[0]
+    subtitle = slide_1.shapes[1]
+    title.text = "Four Jarvis 数据分析报告"
+    subtitle.text = date
     
-    for x in company:
-        # 添加分页符
-        word.add_page_break()# 添加分页符
-        
+    img_path = 'D:/python-bit/Four Jarvis/Demo1/Four Jarvis Auto Demo1 %s.jpg' % date # 图片储存路径
+    slide_2 = prs.slides[1] # 创建ppt 第二页 插入图片概览
+    pic = slide_2.shapes.add_picture(img_path, left=Inches(0), top=Inches(0), height=Inches(8)) 
+    
+    for x in company:        
+        #templateStyleNum = len(prs.slide_layouts) # 获取模板个数
+        oneSlide = prs.slides.add_slide(prs.slide_layouts[0]) # 按照第1个模板创建 一张幻灯片 
         sql = 'SELECT * FROM test2 WHERE company = "%s" AND date = "%s"' % (x, date)
         fm = Fmysql()
         data = fm.data_from_mysql(sql) # 生成数据
         num = len(data)
         
-        if num != 0: 
-            # 设置正文标题
-            p = word.add_paragraph()
-            p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER  # 段落文字居中设置
-            run = p.add_run(x + '舆情报告')
-            run.font.color.rgb = RGBColor(17, 17, 17)  # 字体颜色设置
-            run.font.size = Pt(22)  # 字体大小设置
+        if num != 0:        
+            body_shapes = oneSlide.shapes.placeholders # 获取模板可填充的所有位置
+            table_placeholder = oneSlide.shapes[2]
+            
+            for index, body_shape in enumerate(body_shapes):
+                if index == 0:
+                    body_shape.text = '%s舆情报告' % x
+                elif index == 1:
+                    body_shape.text = '本次舆情监控目标:%s，当天共爬取东方财富网内相关新闻%s篇，具体新闻如下：'% (x, num)
+                elif index == 2:
+                    rows, cols = num + 1, 2
+                    tb = table_placeholder.insert_table(rows, cols).table  # 添加表格，并取表格类
 
-            # 编写正文内容之引言
-            p = word.add_paragraph()  # 添加新段落
-            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY  # 两端对齐
-            p.paragraph_format.first_line_indent = Inches(0.2)  # 控制首行缩进
-            introduction = '本次舆情监控目标:%s，当天共爬取东方财富网内相关新闻%s篇，具体新闻如下：' % (x, num)
-            p.add_run(introduction).bold = True # 加粗
+                    tb.columns[0].width = Inches(4.5)  # 第一列宽度
+                    tb.columns[1].width = Inches(8.8)  # 第二列宽度
+                    tb.cell(0, 0).text = '新闻标题'
+                    tb.cell(0, 1).text = '新闻摘要'
 
-            # 编写正文内容之具体新闻内容
-            for i in range(num):
-                p = word.add_paragraph()  # 添加新段落
-                p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY  # 设置两端对齐
-                p.add_run(str(i + 1) + '. ' + data[i][3])  # 提取新闻标题
-
-            # 编写正文内容之表格添加
-            tb = word.add_table(rows=num + 1, cols=2, style='Light Grid')
-            tb.cell(0, 0).text = '新闻标题'
-            tb.cell(0, 1).text = '新闻摘要'
-
-            for i in range(num):
-                tb.cell(i+1, 0).text = data[i][3] + data[i][4]  # 提取新闻标题 + 新闻链接
-                tb.cell(i+1, 1).text = data[i][5]  # 提取新闻摘要
+                    for i in range(num):
+                        tb.cell(i+1, 0).text = data[i][3] + data[i][4]  # 提取新闻标题 + 新闻链接               
+                        tb.cell(i+1, 1).text = data[i][5]  # 提取新闻摘要                        
         else:
-            # 设置正文标题
-            p = word.add_paragraph()
-            p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER  # 段落文字居中设置
-            run = p.add_run(x + '舆情报告')
-            run.font.color.rgb = RGBColor(17, 17, 17)  # 字体颜色设置
-            run.font.size = Pt(22)  # 字体大小设置
-            
-            p = word.add_paragraph()  # 添加新段落
-            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY  # 两端对齐
-            p.paragraph_format.first_line_indent = Inches(0.4)  # 这个控制首行缩进，
-            introduction = '本次舆情监控目标:%s，当天东方财富网内无该公司相关新闻' % x
-            p.add_run(introduction).bold = True # 加粗
-            
-    auto_docx = word.save(path)
-    return auto_docx
+            body_shapes = oneSlide.shapes.placeholders
+            for index, body_shape in enumerate(body_shapes):
+                if index == 0:
+                    body_shape.text = '%s舆情报告' % x
+                elif index == 1:
+                    body_shape.text = '本次舆情监控目标:%s，当天东方财富网内无该公司相关新闻!' % x
+    auto_pptx = prs.save(path)
+    return auto_pptx
 
 
-def save2docx(date, company, path):
-    # 创建一个空白Word对象，并设置好字体
-    word = docx.Document()
-    word.styles['Normal'].font.name = u'微软雅黑'  # 可换成word里面任意字体
-    word.styles['Normal']._element.rPr.rFonts.set(qn('w:eastAsia'), u'微软雅黑')  # 这里也需要同时修改
-
-    # 创建封面    
-    p = word.add_picture('E:/Four Jarvis LOGO.png', width=Inches(1.25)) # 创建一个图片
-    p = word.add_paragraph()  # 创建一个段落
-    p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER  # 居中设置
-    p.paragraph_format.space_before = Pt(150)  # 段前距为200，这个是测试出来的
-    p.paragraph_format.space_after = Pt(30)  # 段后距为40，这个也是测试出来的
-    run = p.add_run('Four Jarvis数据分析报告')  # 在段落里添加内容
-    font = run.font  # 设置字体
-    font.color.rgb = RGBColor(17, 17, 17)  # 颜色设置，这里是用RGB颜色
-    font.size = Pt(36)  # 字体大小设置，和word里面的字号相对应
-
-    p = word.add_paragraph()  # 新建一个段落
-    p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run(date)  # 在段落中输入当天日期
-    font = run.font
-    font.color.rgb = RGBColor(17, 17, 17)
-    font.size = Pt(26)
-    
-    for x in company:
-        # 添加分页符
-        word.add_page_break()# 添加分页符
-        
-        sql = 'SELECT * FROM test2 WHERE company = "%s" AND date = "%s"' % (x, date)
-        fm = Fmysql()
-        data = fm.data_from_mysql(sql) # 生成数据
-        num = len(data)
-        
-        if num != 0: 
-            # 设置正文标题
-            p = word.add_paragraph()
-            p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER  # 段落文字居中设置
-            run = p.add_run(x + '舆情报告')
-            run.font.color.rgb = RGBColor(17, 17, 17)  # 字体颜色设置
-            run.font.size = Pt(22)  # 字体大小设置
-
-            # 编写正文内容之引言
-            p = word.add_paragraph()  # 添加新段落
-            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY  # 两端对齐
-            p.paragraph_format.first_line_indent = Inches(0.2)  # 控制首行缩进
-            introduction = '本次舆情监控目标:%s，当天共爬取东方财富网内相关新闻%s篇，具体新闻如下：' % (x, num)
-            p.add_run(introduction).bold = True # 加粗
-
-            # 编写正文内容之具体新闻内容
-            for i in range(num):
-                p = word.add_paragraph()  # 添加新段落
-                p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY  # 设置两端对齐
-                p.add_run(str(i + 1) + '. ' + data[i][3])  # 提取新闻标题
-
-            # 编写正文内容之表格添加
-            tb = word.add_table(rows=num + 1, cols=2, style='Light Grid')
-            tb.cell(0, 0).text = '新闻标题'
-            tb.cell(0, 1).text = '新闻摘要'
-
-            for i in range(num):
-                tb.cell(i+1, 0).text = data[i][3] + data[i][4]  # 提取新闻标题 + 新闻链接
-                tb.cell(i+1, 1).text = data[i][5]  # 提取新闻摘要
-        else:
-            # 设置正文标题
-            p = word.add_paragraph()
-            p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER  # 段落文字居中设置
-            run = p.add_run(x + '舆情报告')
-            run.font.color.rgb = RGBColor(17, 17, 17)  # 字体颜色设置
-            run.font.size = Pt(22)  # 字体大小设置
-            
-            p = word.add_paragraph()  # 添加新段落
-            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY  # 两端对齐
-            p.paragraph_format.first_line_indent = Inches(0.4)  # 这个控制首行缩进，
-            introduction = '本次舆情监控目标:%s，当天东方财富网内无该公司相关新闻' % x
-            p.add_run(introduction).bold = True # 加粗
-            
-    auto_docx = word.save(path)
-    return auto_docx
+    def create_email(email_from, email_to, email_subject, email_text, attach_path, attach_name):
+    # 输入发件人昵称、收件人昵称、主题，正文，附件地址,附件名称生成一封邮件
+    message = MIMEMultipart() # 生成一个空的带附件的邮件实例
+    message.attach(MIMEText(email_text, 'plain', 'utf-8')) # 将正文以text的形式插入邮件中
+    message['From'] = Header(email_from, 'utf-8') # 生成发件人名称（这个跟发送的邮件没有关系）
+    message['To'] = Header(email_to, 'utf-8') # 生成收件人名称（这个跟接收的邮件也没有关系）
+    message['Subject'] = Header(email_subject, 'utf-8') # 生成邮件主题                 
+    for name in attach_name:
+        if os.path.isfile(attach_path + '/' + name):
+            # 构造附件
+            att = MIMEText(open(attach_path + '/' + name, 'rb').read(), 'base64', 'utf-8')
+            att["Content-Type"] = 'application/octet-stream'
+            att.add_header("Content-Disposition", "attachment", filename=("gbk", "", name))
+            message.attach(att)
+    return message # 返回邮件
 
 
 def send_email(sender, password, receiver, message):
@@ -488,15 +397,16 @@ def send_email(sender, password, receiver, message):
 
 
 def main_by_schedule(main):
+    schedule.every().day.at("23:43").do(main)        #每天23:43执行一次  
 #     schedule.every(5).minutes.do(main)              #每5分钟执行一次
 #     schedule.every().hour.do(main)                   #每小时执行一次  
-    schedule.every().day.at("23:43").do(main)        #每天23:43执行一次  
 #     schedule.every().monday.do(main)                 #每周一执行一次
 #     schedule.every().monday.at("22:45").do(main)  #每周一22:45执行一次
    
     while True:
         schedule.run_pending()
-        time.sleep(7) # 这里时间设置是为schedule函数停顿一下，可改为1s，while True会一直循环执行
+        time.sleep(7) 
+        # 这里时间设置是为schedule函数停顿一下，可改为1s，while True会一直循环执行
 
 
 def main():
