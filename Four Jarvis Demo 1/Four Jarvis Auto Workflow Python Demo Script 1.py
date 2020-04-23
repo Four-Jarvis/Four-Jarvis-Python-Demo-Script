@@ -364,7 +364,7 @@ def save2pptx(date, company, path):
     return auto_pptx
 
 
-    def create_email(email_from, email_to, email_subject, email_text, attach_path, attach_name):
+def create_email(email_from, email_to, email_subject, email_text, attach_path, attach_name):
     # 输入发件人昵称、收件人昵称、主题，正文，附件地址,附件名称生成一封邮件
     message = MIMEMultipart() # 生成一个空的带附件的邮件实例
     message.attach(MIMEText(email_text, 'plain', 'utf-8')) # 将正文以text的形式插入邮件中
